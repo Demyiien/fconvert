@@ -14,7 +14,7 @@ Command-line converter for audio, video and images. Run `fconvert /help`.
     core/        cli, engine, help text, config, helpers, ffmpeg runner
     converters/  one file per file type (audio, video, image) + base + registry
     input/       audio/  video/  images/   (drop files here)
-    output/      mp3/  wav/  mp4/  images/ ... (one folder per format)
+                 (converted files are saved to the source file's folder, or custom /out)
 
 ## Add a new type
 Create `converters/xxx_converter.py` subclassing `BaseConverter`, then add it to `ALL_CONVERTERS` in `converters/__init__.py`.

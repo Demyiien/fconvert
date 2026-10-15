@@ -19,7 +19,7 @@ COMMANDS
 
 OPTIONS  (for /convert and /batch)
   /q <number>                   Quality (see /formats for meaning per type)
-  /out <folder>                 Save results here instead of the default output folder
+  /out <folder>                 Save results here instead of the input file's folder
   /overwrite                    Replace existing files instead of creating name_1, name_2...
 
 EXAMPLES
@@ -31,9 +31,8 @@ EXAMPLES
 
 WHERE FILES GO
   Drop files into input\\audio, input\\video or input\\images and refer to them by
-  name only. Results are saved to:
-    output\\mp3 , output\\wav , output\\mp4 , ...   (audio/video, one folder per format)
-    output\\images                                  (all images)
+  name only, or provide any file path. Converted files are saved in the same folder
+  as the source file (unless /out is specified).
 
 NOTES
   Audio and video need ffmpeg installed. Images need Pillow (pip install Pillow).
